@@ -1,3 +1,3 @@
 <?php
-    $conexion = mysqli_connect('localhost', 'root', '', 'peliculas');
+    $conexion = mysqli_connect('localhost', 'root', '', 'movies');
 ?>

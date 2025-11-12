@@ -1,9 +1,10 @@
 <?php
+    session_start();
     require_once('../conexion.php');
     $detalle = $_POST['detalle'];
     $id_pelicula = $_GET['id_pelicula'];
-    $id_usuario = 1;
-    $fecha = "2025-10-29";
+    $id_usuario = $_SESSION['id_usuario'];
+    $fecha = date('Y-m-d');
     echo($detalle);
     $sql = "INSERT INTO comentarios(fecha, detalle, id_pelicula, id_usuario)
             VALUES ('$fecha', '$detalle', $id_pelicula, $id_usuario)";

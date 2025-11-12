@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-10-2025 a las 14:40:21
+-- Tiempo de generación: 12-11-2025 a las 14:38:24
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `peliculas`
+-- Base de datos: `movies`
 --
 
 -- --------------------------------------------------------
@@ -52,7 +52,8 @@ INSERT INTO `comentarios` (`id_comentario`, `fecha`, `detalle`, `id_pelicula`, `
 (10, '2025-10-29', 'Muy buena', 2, 1),
 (11, '2025-10-29', 'dsdasd', 2, 1),
 (12, '2025-10-29', 'pruebe 4', 2, 1),
-(13, '2025-10-29', 'aaaaaaaaaaaaaa', 4, 1);
+(13, '2025-10-29', 'aaaaaaaaaaaaaa', 4, 1),
+(14, '2025-11-12', 'Muy buena Peli 👌', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,9 @@ INSERT INTO `peliculas` (`id_pelicula`, `titulo`, `foto`, `fecha`, `detalle`, `i
 (3, 'Top Gun', 'images/top_gun.jpg', 1986, 'La Marina de los Estados Unidos ha creado una escuela de élite para pilotos con el fin de sacar una promoción de expertos en técnicas de combate. En la academia, más conocida como Top Gun, a los mejores se les entrena para ser intrépidos y fríos al mismo tiempo, capaces de no perder los nervios en situaciones extremas y de no inmutarse al romper la barrera del sonido a los mandos de un F-14. A la escuela llega el joven Maverick, famoso por su temeraria aunque brillante forma de pilotar.', 1),
 (4, 'Superman', 'images/superman.jpg', 2025, 'Superman es una película estadounidense de superhéroes de 2025 basada en el personaje homónimo de DC Comics. Escrita y dirigida por James Gunn, la cinta inaugura el Universo DC (UDC) y marca un reinicio del héroe en el cine. David Corenswet interpreta a Clark Kent / Superman, acompañado por Rachel Brosnahan, Nicholas Hoult, Edi Gathegi, Anthony Carrigan, Nathan Fillion e Isabela Merced. La trama sigue al protagonista cuando enfrenta las consecuencias de su intervención en un conflicto internacional provocad', 1),
 (5, 'Misión Rescate', 'images/mision-rescate.jpg', 2023, 'pelicula', 1),
-(6, 'iron man', '', 2025, 'un detalle de la pelicual', 1);
+(6, 'iron man', 'images/iron_man.jpg', 2025, 'un detalle de la pelicual', 1),
+(9, 'Frankenstein', 'images/Frankenstein.webp', 2025, 'Un científico brillante y obsesivo, Victor Frankenstein, en su ambición por desafiar a la muerte, da vida a una criatura ensamblada con partes de cadáveres. Pese a tratarse de una proeza científica, Frankenstein considera que la criatura carece de inteligencia y la rechaza. Dolida, esta se rebela contra su creador.', 3),
+(10, '', 'images/', 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -142,7 +145,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `email`, `password`, `id_rol`) VALUES
-(1, 'juan', 'juan@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1);
+(1, 'juan', 'juan@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1),
+(2, 'Carlos', 'carlos@dv.edu.ar', '81dc9bdb52d04dc20036dbd8313ed055', 2);
 
 --
 -- Índices para tablas volcadas
@@ -190,7 +194,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
@@ -202,7 +206,7 @@ ALTER TABLE `generos`
 -- AUTO_INCREMENT de la tabla `peliculas`
 --
 ALTER TABLE `peliculas`
-  MODIFY `id_pelicula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pelicula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -214,7 +218,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas

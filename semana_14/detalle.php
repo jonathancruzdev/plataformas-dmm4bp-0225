@@ -48,11 +48,22 @@
             ?>
            
         </ul>
+        <?php
+            if( $logueado == true){
+        ?>
 
-        <form action="acciones/comentarioCrear.php?id_pelicula=<?php echo($id_pelicula); ?>" method="POST">
-            <textarea name="detalle" class="form-control"></textarea>
-            <button type="submit" class="btn btn-success">Comentar</button>
-        </form>
+          <form action="acciones/comentarioCrear.php?id_pelicula=<?php echo($id_pelicula); ?>" method="POST">
+              <textarea name="detalle" class="form-control"></textarea>
+              <button type="submit" class="btn btn-success">Comentar</button>
+          </form>
+        <?php
+            } else {
+              echo("<div>
+                Para comentar tenes que iniciar Sesión <a href='login.php'> Inciar Sesión </a>
+              </div>");
+            }
+        ?>
+ 
     </div>
   </div>
 
